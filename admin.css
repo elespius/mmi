@@ -1,92 +1,81 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "toc_visible": true,
-      "authorship_tag": "ABX9TyMIObskuOx6Q1SJlAwEAYOO",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/elespius/mmi/blob/main/admin.css\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        ".container {\n",
-        "    max-width: 800px;\n",
-        "    margin: 0 auto;\n",
-        "    padding: 20px;\n",
-        "}\n",
-        "\n",
-        "form {\n",
-        "    margin-bottom: 20px;\n",
-        "}\n",
-        "\n",
-        "label {\n",
-        "    display: block;\n",
-        "    margin-bottom: 5px;\n",
-        "}\n",
-        "\n",
-        "input[type=\"text\"] {\n",
-        "    width: 100%;\n",
-        "    padding: 8px;\n",
-        "    margin-bottom: 10px;\n",
-        "}\n",
-        "\n",
-        "button {\n",
-        "    padding: 10px 20px;\n",
-        "    background-color: #007bff;\n",
-        "    color: #fff;\n",
-        "    border: none;\n",
-        "    cursor: pointer;\n",
-        "}\n"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 108
-        },
-        "id": "XWj_pkbuTMOc",
-        "outputId": "ac14258b-ba6d-471b-aaa4-be072e9daa40"
-      },
-      "execution_count": 4,
-      "outputs": [
-        {
-          "output_type": "error",
-          "ename": "SyntaxError",
-          "evalue": "invalid syntax (<ipython-input-4-f8deb317890d>, line 1)",
-          "traceback": [
-            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-4-f8deb317890d>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    <?php\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [],
-      "metadata": {
-        "id": "UQPonwdBgYrK"
-      },
-      "execution_count": null,
-      "outputs": []
-    }
-  ]
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+.header {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.header-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.header-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+.main {
+    padding: 15px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
 }
