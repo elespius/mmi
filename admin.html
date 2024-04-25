@@ -1,55 +1,77 @@
-// JavaScript for admin interface
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Admin Panel</h1>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Sample portfolio data (replace with actual data from the backend)
-    let portfolioData = [
-        { title: 'Project One', category: 'SEO & Marketing', image: 'assets/images/portfolio-01.jpg' },
-        { title: 'Second Project', category: 'Advertising & Marketing', image: 'assets/images/portfolio-02.jpg' },
-        // Add more portfolio items as needed
-    ];
+    <!-- Main content with sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-md-3 sidebar">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">User Management</a></li>
+                    <li><a href="#">Project Management</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </aside>
 
-    // Function to display portfolio items
-    function displayPortfolioItems() {
-        const portfolioList = document.getElementById('portfolio-list');
-        portfolioList.innerHTML = '';
-        portfolioData.forEach(item => {
-            const portfolioItem = document.createElement('div');
-            portfolioItem.classList.add('portfolio-item');
-            portfolioItem.innerHTML = `
-                <h3>${item.title}</h3>
-                <p>${item.category}</p>
-                <img src="${item.image}" alt="${item.title}">
-            `;
-            portfolioList.appendChild(portfolioItem);
-        });
-    }
+            <!-- Main content -->
+            <main class="col-md-9">
+                <!-- Dashboard section -->
+                <section class="dashboard-section">
+                    <!-- Content for dashboard section -->
+                </section>
 
-    // Function to handle form submission
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const title = formData.get('title');
-        const category = formData.get('category');
-        const image = formData.get('image');
-        // Add code to send form data to the backend
-        // For now, just log the form data
-        console.log('Title:', title);
-        console.log('Category:', category);
-        console.log('Image:', image);
-        // Update portfolioData array with the new item
-        portfolioData.push({ title, category, image });
-        // After adding new item, display updated portfolio
-        displayPortfolioItems();
-    }
+                <!-- User Management section -->
+                <section class="user-management-section">
+                    <!-- Content for user management section -->
+                </section>
 
-    // Add event listener for form submission
-    const portfolioForm = document.getElementById('portfolio-form');
-    if (portfolioForm) {
-        portfolioForm.addEventListener('submit', handleFormSubmit);
-    } else {
-        console.error('Portfolio form element not found.');
-    }
+                <!-- Project Management section -->
+                <section class="project-management-section">
+                    <!-- Content for project management section -->
+                </section>
 
-    // Display initial portfolio items
-    displayPortfolioItems();
-});
+                <!-- Settings section -->
+                <section class="settings-section">
+                    <!-- Content for settings section -->
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Admin Panel</p>
+        </div>
+    </footer>
+
+    <!-- Link to Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link to custom JavaScript -->
+    <script src="admin.js"></script>
+</body>
+</html>
