@@ -1,37 +1,21 @@
+// Your server-side logic using Node.js (if needed)
+// For example, using Express.js to handle HTTP requests
 const express = require('express');
-const mysql = require('mysql');
-
-// Create a connection pool for MySQL
-const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: 'localhost',
-    user: 'your_mysql_username',
-    password: 'your_mysql_password',
-    database: 'your_database_name'
-});
-
 const app = express();
 const port = 3000;
 
-// Middleware to parse JSON request bodies
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Route to handle form submissions
 app.post('/submit-form', (req, res) => {
-    const { title, category, image } = req.body;
-    const sql = 'INSERT INTO portfolio_items (title, category, image) VALUES (?, ?, ?)';
-    pool.query(sql, [title, category, image], (err, result) => {
-        if (err) {
-            console.error('Error executing SQL:', err);
-            res.status(500).json({ error: 'An error occurred while processing your request' });
-            return;
-        }
-        console.log('Form data inserted successfully');
-        res.json({ success: true });
-    });
+    const title = req.body.title;
+    const category = req.body.category;
+    const image = req.body.image;
+
+    // Handle form submission and database interaction here
+
+    res.send('Form submitted successfully!');
 });
 
-// Start the server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server listening at http://localhost:${port}`);
 });
